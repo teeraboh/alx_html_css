@@ -1,0 +1,416 @@
+/* Base Styles */
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.image-cover {
+    background-image: url('/headphones/images/background.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.navlink {
+    display: flex;
+    justify-content: center;
+    /* Center logo horizontally */
+    align-items: center;
+    /* Center logo vertically */
+    padding: 20px;
+    position: relative;
+}
+
+.navlink ul {
+    margin-left: 10rem;
+    margin-right: -10rem;
+}
+
+.logo2 {
+    margin-left: 8rem;
+}
+
+.navlink h1 {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.logo2 {
+    width: 10rem;
+    /* Adjust logo size */
+}
+
+/* Hamburger Menu - Hidden by default */
+.menu-toggle {
+    display: none;
+}
+
+/* Toggle the menu icon to 'X' */
+.menu-toggle:checked+.menu-icon div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked+.menu-icon div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked+.menu-icon div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon .bar {
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    width: 100%;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(232, 13, 13);
+}
+
+.centerText {
+    margin-top: 300px;
+    text-align: center;
+}
+
+.centerText h2 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.centerText h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-top: -20px;
+}
+
+.centerText button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #d91919;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+.paragraph1 {
+    text-align: center;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 5rem;
+    color: white;
+    margin-bottom: 5rem;
+    padding-bottom: 4rem;
+}
+
+/* Mobile Styles - Hamburger Menu */
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        padding-right: 8rem;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    a:hover {
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .logo2 {
+        width: 10rem;
+        /* Adjust logo size */
+        padding-right: -10rem;
+        margin-left: -1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Position the hamburger menu to the left */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 25px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        /* Move hamburger to the left */
+    }
+
+    .image-cover {
+        background-image: url('/headphones/images/background.png');
+        background-size: cover;
+        background-position: 1220px center;
+        min-height: 100vh;
+
+    }
+
+
+    .menu-icon .bar {
+        height: 4px;
+        background-color: white;
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    /* Hide the navigation menu by default */
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    /* Make nav links display vertically */
+    nav ul {
+        text-align: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        /* Stack items vertically */
+        margin-top: 5rem;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        /* Adjust spacing between links */
+        margin-right: 20rem;
+    }
+
+    /* Show nav when menu is toggled on */
+    .menu-toggle:checked~nav {
+        display: flex;
+    }
+
+    .logo2 {
+        margin-right: -1rem;
+
+    }
+
+    /* Remove background */
+    nav {
+        background-color: transparent;
+        /* No background color */
+    }
+
+    nav ul li a {
+        font-size: 15px;
+        width: 10rem;
+        display: flex;
+
+
+    }
+
+    /* Link hover effect */
+    nav ul li a:hover {
+        color: rgb(232, 13, 13);
+        text-decoration: none;
+
+    }
+
+    .paragraph1 {
+      text-align: center;
+      margin: 0 auto;
+      width: 250px;
+    }
+
+
+    }
+
+    .centerText h2 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .centerText h3 {
+        font-size: 15px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+    }
+
+}
+
+
+
+/* second frame */
+.what-we-do {
+    padding-bottom: 5rem;
+}
+
+.what-we-do h1 {
+    text-align: center;
+}
+
+.what-we-do h3 {
+    font-size: 12px;
+    text-align: center;
+    padding-right: 5rem;
+}
+
+.paragragh2 {
+    text-align: center;
+    padding-left: 16rem;
+    padding-right: 16rem;
+
+}
+
+.soundicon {
+    fill: red;
+    /* Changes the color to red */
+    width: 96px;
+}
+
+.holberton_school-icon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Divide into 4 equal parts */
+    gap: 20px;
+    padding-left: 10rem;
+    padding-right: 5rem;
+}
+
+/*tablet */
+@media (max-width: 768px) {
+    .holberton_school-icon {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Divide into 2 equal parts */
+        gap: 10px;
+        padding-left: 7rem;
+        padding-right: 5rem;
+    }
+
+    .soundicon {
+        fill: red;
+        /* Changes the color to red */
+        width: 90px;
+
+    }
+
+    .what-we-do h3 {
+        font-size: 10px;
+        text-align: center;
+        padding-right: 5rem;
+        margin-left: 2rem;
+
+    }
+
+    .paragragh2 {
+        text-align: center;
+        padding-left: 7rem;
+        padding-right: 7rem;
+        font-size: 12px;
+    }
+}
+
+/* Mobile responsive styles for screens 480px and below */
+@media (max-width: 480px) {
+
+    .holberton_school-icon {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Stack the items vertically */
+        gap: 5px;
+        /* Smaller gap between items */
+        padding-left: 2rem;
+        /* Adjust padding to be smaller */
+        padding-right: 2rem;
+        /* Adjust padding to be smaller */
+    }
+
+    .soundicon {
+        width: 48px;
+        /* Adjust icon size for smaller screens */
+        padding-left: 8rem;
+    }
+
+    .paragragh2 {
+        text-align: center;
+        padding-left: 7rem;
+        padding-right: 7rem;
+        font-size: 12px;
+    }
+
+    .what-we-do h2 {
+        padding-left: 6rem;
+    }
+
+    .what-we-do h3 {
+        padding-left: 2rem;
+    }
+
+}
+
+
+}
